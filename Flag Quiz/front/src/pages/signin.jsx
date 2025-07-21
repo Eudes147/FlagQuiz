@@ -13,7 +13,7 @@ function SignIn() {
   const navigate = useNavigate();
 
   const handleSign = () => {
-    fetch("http://127.0.0.1:8000/auth/signin/", {
+    fetch("http://192.168.100.3:8000/auth/signin/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function Login() {
   const { setUser } = useUser();
 
   const handleLogin = () => {
-    fetch(`http://127.0.0.1:8000/auth/login/${username}/`, { method: "GET" })
+    fetch(`http://192.168.100.3:8000/auth/login/${username}/`, { method: "GET" })
       .then(res => res.json())
       .then(data => {
         setUser(data);      // On stocke l'utilisateur

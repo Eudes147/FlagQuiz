@@ -23,7 +23,7 @@ function Quiz() {
     regions = ["africa","europe","america","asia"]
 
     const updatePoints = ()=>{
-        fetch(`http://127.0.0.1:8000/auth/changParams/${user.username}/`,
+        fetch(`http://192.168.100.3:8000/auth/changParams/${user.username}/`,
             {
                 method:"PUT",
                 headers: {"Content-Type":"application/json"},
@@ -143,13 +143,13 @@ function Quiz() {
             <div className="flex items-center justify-center mt-10 flex-col">
                 <h1 className="text-2xl font-sans mb-5">Bonjour Mr { user.surname } { user.name }.</h1>
                 {prevName !="" && <p>C'était {prevName}.</p>}
-                <p>Points: {points} </p>
+                <p className="text-bold text-red-500">Points: {points} </p>
                 <div className="card bg-base-100 w-150 max-sm:w-[100vw] max-sm:px-3 shadow-lg indicato">
                     <span className="indicator-item badge badge-neutral">{ tour }/20</span>
                     <figure>
                         <img
                             src={country?.flags?.png}
-                            alt="Shoes" />
+                            alt="Country..." />
                     </figure>
                     <div className="card-body max-[430px]:p-3 max-[310px]:p-0">
                         <h2 className="card-title">Country Card</h2>

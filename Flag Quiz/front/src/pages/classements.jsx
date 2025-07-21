@@ -6,7 +6,7 @@ function Classements() {
     const [users,setUsers] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch("http://127.0.0.1:8000/auth/dashboard/")
+        fetch("http://192.168.100.3:8000/auth/dashboard/")
         .then(res=>{
             return res.json();
         })
