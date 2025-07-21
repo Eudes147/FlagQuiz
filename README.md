@@ -18,10 +18,11 @@ PARTIE1
 git clone https://github.com/Eudes147/FlagQuiz.git
 cd FlagQuiz/Flag Quiz
 ##ETAPE 1 Installer les bibliothèques corsheaders,django avec:
-pip install corsheaders pip install django 
+pip install corsheaders 
+pip install django 
 ##ETAPE 2 Installer NodeJs 
 ##ETAPE3 Lancer le serveur backend:
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 ##ETAPE 4 Lancer le Quizz avec: 
-npm run dev
+npm run dev -- --host
 
